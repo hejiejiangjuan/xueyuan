@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>发布视频</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<meta name="browsermode" content="application">
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" href="css/all.css">
+	</head>
+	<body>
+		<div class="s_condition" id="main">
+			<div class="s_cond_alone" id="curriculum">
+				<div class="s_cond_left">
+					标签<span class="s_red">*</span>
+				</div>
+				<div class="s_cond_right">
+					请选择课程标签
+				</div>
+			</div>
+
+
+			<div class="s_cond_alone" id="s_title">
+				<div class="s_cond_left">
+					标题<span class="s_red">*</span>
+				</div>
+				<div class="s_cond_right">
+					请输入课题标题
+				</div>
+			</div>
+
+			<div class="s_cover">
+				<div class="s_cover_left">
+					<div class="s_cover_up">
+						设置封面图<span class="s_red">*</span>
+					</div>
+					<div class="s_cover_down">
+						建议上传16:9尺寸，观看效果最佳
+					</div>
+				</div>
+				<div class="s_cover_right">
+					<img src="images/s_cover_right.png" class="img">
+				</div>
+			</div>
+
+			<div class="s_cond_alone">
+				<div class="s_cond_left">
+					转载<span class="s_red">*</span>
+				</div>
+				<div class="s_choice">
+					<div class="">
+						<input type="radio" name="aa" id="" value="" class="s_radio " checked="" />所有人
+					</div>
+					<div class="">
+						<input type="radio" name="aa" id="" value="" class="s_radio" />代理
+					</div>
+					<div class="">
+						<input type="radio" name="aa" id="" value="" class="s_radio" />不可转载
+					</div>
+				</div>
+			</div>
+			<div class="s_cond_alone">
+				<div class="s_cond_left">
+					状态<span class="s_red">*</span>
+				</div>
+				<div class="s_choice">
+					<div class="">
+						<input type="radio" name="state" id="" value="0" class="s_radio sq_state" checked="" />公&nbsp;&nbsp;&nbsp;开
+					</div>
+					<div class="">
+						<input type="radio" name="state" id="" value="1" class="s_radio sq_state" />私密
+					</div>
+					<div class="">
+						<input type="radio" name="state" id="" value="2" class="s_radio sq_state" />级别可见
+					</div>
+				</div>
+			</div>
+
+			<div class="s_cond_alone" id="password" style="display: none;">
+				<div class="s_cond_left">
+					密码<span class="s_red">*</span>
+				</div>
+				<div class="s_choice">
+					<input type="number" name="" id="" class="s_password" oninput="value=value.replace(/[^\d]/g,'')" placeholder="请输入数字"/>
+				</div>
+			</div>
+
+
+			<div class="s_cond_alone" id="s_brief">
+				<div class="s_cond_left">
+					简介
+				</div>
+				<div class="s_cond_right">
+					<input type="text" name="" id="" value="" placeholder="每个时代，都会犒赏爱学习的人......" class="s_brief" readonly="readonly" />
+				</div>
+			</div>
+			<div class="s_cond_alone">
+				<div class="s_cond_left">
+					权限
+				</div>
+				<div class="s_cond_right s_jurisdiction">
+					<input type="radio" name="sq_share" id="sq_share" value="0" class="s_radio alone_share" />分享可见(仅针对新人和VIP特权)
+				</div>
+			</div>
+
+			<div class="s_cover">
+				<div class="s_cover_left">
+					<div class="s_cover_up">
+						添加课程视频<span class="s_red">*</span>
+					</div>
+					<div class="s_cover_down">
+						在这里添加课程主要内容详情.
+					</div>
+				</div>
+				<div class="s_cover_right" id="add_cour">
+					<img src="images/s_add.png" class="img">
+				</div>
+			</div>
+
+			<div class="s_audio">
+				<div class="s_audio_cont">
+					<div class="s_audio_title">
+						课程内容
+					</div>
+
+					<textarea class="s_int_textar" contenteditable="true" placeholder="在这里添加课程内容详情"></textarea>
+					<div class="s_picture">
+						<div class="s_picture_all">
+
+							<div class="s_pic_img">
+								<img src="images/s_pic.png" class="img">
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="s_must_fill">
+				<span class="s_red">*</span>表示必填项
+			</div>
+
+			<div class="s_con_release">
+				确认上传
+			</div>
+		</div>
+
+
+		<!--课程标签-->
+		<div class="course_label hide" id="course_label">
+			<div class="s_background"></div>
+			<div class="s_cou_black">
+
+			</div>
+
+			<div class="s_cou_label">
+				<div class="s_cou_title">
+					选择课程标签
+				</div>
+				<div class="s_cou_all">
+					<div class="s_cou_alone s_cou_select">
+						产品知识
+					</div>
+					<div class="s_cou_alone">
+						案例分析
+					</div>
+					<div class="s_cou_alone">
+						护肤百科
+					</div>
+
+				</div>
+				<div class="s_cou_all s_cou_alla">
+					<div class="s_cou_alone">
+						代理专享
+					</div>
+					<div class="s_cou_alone">
+						小白入门
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--标题输入-->
+		<div class="course_label header_input hide" id="header_cont">
+			<div class="s_background" id="s_background"></div>
+			<div class="header_cont">
+				<div class="header_up">
+					编辑课程标题
+				</div>
+				<div rows="" cols="" class="header_bottom" contenteditable="true"></div>
+				<div class="header_query" id="header_query">
+					确认
+				</div>
+			</div>
+		</div>
+
+		<!--简介输入-->
+		<div class="course_label header_input hide" id="s_brief_cont">
+			<div class="s_background" id="s_backgrounda"></div>
+			<div class="header_cont">
+				<div class="header_up">
+					编辑简介
+				</div>
+				<div rows="" cols="" class="header_bottom" contenteditable="true"></div>
+				<div class="header_query" id="s_brief_query">
+					确认
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/public.js"></script>
+	<script type="text/javascript">
+		$(":radio").click(function() {
+			if ($(this).val() == 1) {
+				$("#password").show();
+			} else {
+				$("#password").hide();
+			}
+		});
+		$("#curriculum").click(function() {
+			$("#course_label").show();
+		});
+		$(".s_cou_black").click(function() {
+			$("#course_label").hide();
+		});
+		$("#s_title").click(function() {
+			$("#header_cont").css("display", "flex");
+		});
+		$("#header_query").click(function() {
+			$("#header_cont").css("display", "none");
+		});
+		$("#s_background").click(function() {
+			$("#header_cont").hide();
+		})
+		$("#s_brief").click(function() {
+			$("#s_brief_cont").css("display", "flex");
+		})
+		$("#s_brief_query").click(function() {
+			$("#s_brief_cont").css("display", "none");
+		});
+		$("#s_backgrounda").click(function() {
+			$("#s_brief_cont").hide();
+		})
+
+		$(function() {
+			var isDefualtAdd = 0; //0不选中，1选中
+
+			$('.alone_share').click(function() {
+				var $radio = $(this);
+				if ($radio.data('sq_share') == true) {
+					$radio.prop('checked', false);
+					$radio.data('sq_share', false);
+					isDefualtAdd = 0;
+				} else {
+					$radio.prop('checked', true);
+					$radio.data('sq_share', true);
+					isDefualtAdd = 1;
+				}
+			});
+		})
+	</script>
+</html>

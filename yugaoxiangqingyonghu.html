@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>预告详情用户</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<meta name="browsermode" content="application">
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" href="css/all.css">
+	</head>
+	<body>
+		<div class="zheight" id="zheight">
+			<div class="s_begins">
+				<div class="s_also">
+					<div class="s_rectangle">
+
+					</div>
+					<div class="s_distance">
+						距开课还有
+					</div>
+					<div class="s_rectangle">
+
+					</div>
+				</div>
+
+				<div class="s_count ">
+					<div class="s_count_num">
+						1
+					</div>
+					<div class="s_count_word">
+						天
+					</div>
+					<div class="s_count_num">
+						12
+					</div>
+					<div class="s_count_word">
+						时
+					</div>
+					<div class="s_count_num">
+						26
+					</div>
+					<div class="s_count_word">
+						分
+					</div>
+				</div>
+			</div>
+
+			<div class="s_specific">
+				<div class="s_specific_word">
+					<div class="s_specific_up">
+						在这里显示课程标题，在这里显示课程标题
+					</div>
+					<div class="s_specific_down">
+						<div class="s_specific_class">
+							产品知识
+						</div>
+						<div class="s_specific_class">
+							公开
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="s_character">
+				<div class="s_character_cont">
+					<div class="s_people">
+						<div class="s_people_pic">
+							<img src="images/hea.png" class="img">
+						</div>
+						<div class="s_people_word">
+							<div class="s_people_name">
+								小月月老师
+							</div>
+							<div class="s_grade">
+								<img src="images/grade.png" class="grade_img">
+								<img src="images/grade.png" class="grade_img">
+								<img src="images/grade.png" class="grade_img">
+							</div>
+						</div>
+					</div>
+
+					<div class="s_grading" id="pay_attention">
+						+关注
+					</div>
+					<div class="s_grading hide" id="remove_conce">
+						已关注
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="s_curriculum s_user" id="wh">
+			<div class="s_curr_title">
+				<div class="s_curr_word s_curr_blod">
+					<div class="s_curr_de">课程介绍</div>
+					<div class="s_curr_lone">
+
+					</div>
+				</div>
+				<div class="s_curr_word">
+					<div class="s_curr_de">课程详情</div>
+					<div class="s_curr_lone s_curr_back">
+
+					</div>
+				</div>
+			</div>
+
+			<div class="s_curr_content">
+				<div class="s_curr_detial">
+					比其他平台字体售价，阿里版权字体素材平台将提供更优惠的字体价格。除了提供免费字体之外，还能低价购买正版设计字体，阿里智能字体的创作技术让字体价格更亲民。而针对企业大客户平台将推出专属定价套餐，一站式采购更方便。
+				</div>
+				<div class="s_curr_detial hide">
+					阿里版权字体素材平台将提供更优惠的字体价格。除了提供免费字体之外，还能低价购买正版设计字体，阿里智能字体的创作技术让字体价格更亲民。而针对企业大客户平台将推出专属定价套餐，一站式采购更方便。
+				</div>
+			</div>
+		</div>
+		<a href="">
+			<div class="s_start">
+				开课提醒我
+			</div>
+		</a>
+
+		<!-- <img src="images/huiqu.png" class="modify_img"> -->
+		<img src="images/gaix.png" class="return_img">
+
+	</body>
+	<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.s_curr_title .s_curr_word').click(function() {
+				var i = $(this).index();
+				$(this).addClass('s_curr_blod').siblings().removeClass('s_curr_blod');
+				$(".s_curr_lone").addClass('s_curr_back');
+				$(this).find(".s_curr_lone").removeClass('s_curr_back')
+				$('.s_curr_content .s_curr_detial').eq(i).show().siblings().hide();
+			});
+			function bwh() {
+				var wheight = window.screen.height;
+				var zheight = $("#zheight").outerHeight(true);
+				var zwh = wheight - zheight - 20;
+				$("#wh").css("height",zwh + "px")
+			};
+			bwh();
+			$("#pay_attention").click(function(){
+				$(this).hide();
+				$("#remove_conce").css("display","flex");
+			});
+			$("#remove_conce").click(function(){
+				$(this).hide();
+				$("#pay_attention").css("display","flex");
+			});
+		})
+	</script>
+</html>
